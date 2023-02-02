@@ -4,6 +4,8 @@ import com.example.Bank.Entity.AccountsEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class AccountsImplementation implements AccountService{
     @Autowired
@@ -16,5 +18,10 @@ public class AccountsImplementation implements AccountService{
     @Override
     public AccountsEntity addAccount(AccountsEntity account) {
         return ad.save(account);
+    }
+
+    @Override
+    public List<AccountsEntity> getAllAccount() {
+        return ad.findAll();
     }
 }

@@ -1,9 +1,12 @@
 package com.example.Bank.Entity;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 @Entity
 public class AccountsEntity {
 	   @Id
+	   @GeneratedValue(strategy= GenerationType.AUTO)
 	    private Long account_no;
 	    private String first_name;
 	    private String second_name;
